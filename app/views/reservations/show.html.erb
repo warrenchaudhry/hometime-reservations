@@ -1,0 +1,68 @@
+<p id="notice"><%= notice %></p>
+
+<table>
+<tbody>
+  <tr>
+    <td>ID</td>
+    <td><%= @reservation.id%></td>
+  </tr>
+  <tr>
+    <td>Start Date</td>
+    <td><%= @reservation.start_date%></td>
+  </tr>
+  <tr>
+    <td>End Date</td>
+    <td><%= @reservation.end_date%></td>
+  </tr>
+  <tr>
+    <td>Nights</td>
+    <td><%= @reservation.nights%></td>
+  </tr>
+  <tr>
+    <td>Guests</td>
+    <td><%= @reservation.guests %></td>
+  </tr>
+  <tr>
+    <td>Adult</td>
+    <td><%= @reservation.adults %></td>
+  </tr>
+  <tr>
+    <td>Children</td>
+    <td><%= @reservation.children %></td>
+  </tr>
+  <tr>
+    <td>Infants</td>
+    <td><%= @reservation.infants %></td>
+  </tr>
+  <tr>
+    <td>Guest Email</td>
+    <td><%= @reservation.guest.email %></td>
+  </tr>
+  <tr>
+    <td>Guest Name</td>
+    <td><%= @reservation.guest.full_name %></td>
+  </tr>
+  <tr>
+    <td>Guest Phone Numbers</td>
+    <td><%= @reservation.guest.phone_numbers.pluck(:number).join('<br/>').html_safe %></td>
+  </tr>
+  <tr>
+    <td>Currency</td>
+    <td><%= @reservation.currency %></td>
+  </tr>
+  <tr>
+    <td>Payout Amount</td>
+    <td><%= number_to_currency @reservation.payout_price, precision: 2 %></td>
+  </tr>
+  <tr>
+    <td>Security Price</td>
+    <td><%= number_to_currency @reservation.security_price, precision: 2 %></td>
+  </tr>
+   <tr>
+    <td>Total Price</td>
+    <td><%= number_to_currency @reservation.total_price, precision: 2 %></td>
+  </tr>
+</tbody>
+</table>
+<br/>
+<%= link_to 'Back', reservations_path %>

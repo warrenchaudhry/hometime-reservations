@@ -1,0 +1,27 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Reservations</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>ID</th>
+      <th>Nights</th>
+      <th>No. of guests</th>
+      <th>Guest Name</th>
+      <th></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @reservations.each do |res| %>
+      <tr>
+        <td><%= link_to res.id, reservation_path(res) %>
+        <td><%= link_to res.nights %>
+        <td><%= link_to res.guests %>
+        <td><%= res.guest.full_name %>
+        <td><%= link_to 'Show', res %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
