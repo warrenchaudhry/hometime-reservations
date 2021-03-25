@@ -11,7 +11,7 @@ You should have the following installed to be able to test this application loca
   * `git clone https://github.com/warrenchaudhry/hometime-reservations.git`
   * `cd hometime-reservations`
   * `bundle install`
-  * `yarn install`
+  * `rails webpacker:install`
   * `rails db:create`
   * `rails db:migrate`
 
