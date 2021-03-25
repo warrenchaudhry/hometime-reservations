@@ -24,9 +24,10 @@ You should have the following installed to be able to test this application loca
 # Reservation's Endpoint
 ## Create a reservation
   **Endpoint:** `POST /api/v1/reservations`
+  
   **Headers:** 
-    * Content-Type:application/json *
-    * Authorization: Token sample-token * # note `sample-token` is just a temporary token just to have something to verify authentication
+    - `Content-Type:application/json`
+    - `Authorization: Token sample-token` # note `sample-token` is just a temporary token just to have something for token verification
 
 
 ## Test request
@@ -62,7 +63,7 @@ You should have the following installed to be able to test this application loca
 }
 ```
 
-**Sample `curl` request
+**Sample `curl` request**
 
 ```
 curl --header "Content-Type: application/json" \
@@ -100,7 +101,7 @@ curl --header "Content-Type: application/json" \
 
 ```
 
-**Sample `curl` request
+**Sample `curl` request**
 
 ```
 curl --header "Content-Type: application/json" \
